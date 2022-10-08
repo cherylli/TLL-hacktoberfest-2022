@@ -31,4 +31,5 @@ jobs:
         env: 
           MONGO_URI: ${{secrets.MONGO_URI}}
           TEST_MONGO_URI: ${{secrets.TEST_MONGO_URI}}
+          JWT_SECRET: ${{secrets.JWT_SECRET}}
         run: yarn test:server
