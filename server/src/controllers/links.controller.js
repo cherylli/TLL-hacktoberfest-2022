@@ -79,7 +79,7 @@ editLink = async (req, res) => {
       return res.status(404).json({ success: false, message: 'Link not found.' });
     }
 
-    if (!validator.isURL(req.body.url)) {
+    if (req.body.url && !validator.isURL(req.body.url)) {
       return res.status(422).json({ success: false, message: 'invalid url' });
     }
 
